@@ -44,7 +44,7 @@ namespace lr_three.Controllers
                 return $"Error";
             }
         }
-        [HttpGet("{firstNumber}/{secondNumber}")]
+        [HttpGet("{firstNumber:double}/{secondNumber:double}")]
         public string Index(string firstNumber, string secondNumber)
         {
             double x, y;
