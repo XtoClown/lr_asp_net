@@ -27,7 +27,7 @@ namespace lr_four.Controllers
         {
             return $"{_service.GetUserInfo()}";
         }
-        [HttpGet("Profile/{id}")]
+        [HttpGet("Profile/{id:int}")]
         public string Profile(string id)
         {
             int idParsed;
