@@ -19,7 +19,7 @@ namespace lr_three.Controllers
         {
 
             string plusMinus = @"[+-]?";
-            string findCalcSign = @"[+*]|(?!-)-";
+            string findCalcSign = @"[+*-]";
             string findDouble = @"\d+\.\d+";
 
             Regex regex = new Regex($@"({plusMinus})({findDouble})\s*({findCalcSign})\s*({plusMinus})({findDouble})");
