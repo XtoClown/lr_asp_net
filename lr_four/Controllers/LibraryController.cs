@@ -27,15 +27,21 @@ namespace lr_four.Controllers
         {
             return $"{_service.GetUserInfo()}";
         }
-        [HttpGet("Profile/{id:int}")]
-        public string Profile(string id)
+        [HttpGet("Profile/{id:int?}")]
+        public string Profile(int id)
         {
-            int idParsed;
-            if (int.TryParse(id, out idParsed) && idParsed <= 5 && idParsed >= 0)
+            if(id == null)
             {
-                return $"{_service.GetUserInfo(idParsed)}";
+                return $"{_service.GetUserInfo()}";
             }
-            else return "Error";
+            else
+            {
+                if ( id <= 5 && id >= 0)
+                {
+                    return $"{_service.GetUserInfo(id)}";
+                }
+                else return "Error";
+            }
         }
     }
 }
