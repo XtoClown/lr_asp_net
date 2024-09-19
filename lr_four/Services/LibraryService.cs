@@ -16,7 +16,7 @@ namespace lr_four.Services
         {
             _configuration = configuration;
         }
-        public string Greeting() { return "Greeting"; }
+        public string Greeting() { return "Welcome to the library"; }
         public string GetBookList() 
         {
             string result = "";
